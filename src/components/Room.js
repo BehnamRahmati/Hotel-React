@@ -1,9 +1,29 @@
 import React from 'react'
-
-export default function Room() {
+import { Link } from "react-router-dom"
+import PropTypes from "prop-types"
+import defaultImage from "../images/room-1.jpeg"
+export default function Room({ room }) {
+  const { name, slug, images, price } = room;
   return (
-    <div>
-      hello from room component
-    </div>
+    <article className="room">
+      <div className="img-container">
+        <img src={images[0] || defaultImage} alt={name} />
+        <div className="price-tag">
+          <h6>${price}</h6>
+          <p>per night </p>
+        </div>
+        <Link to={`rooms/${slug}`} className="btn-primary room-link">feature</Link>
+      </div>
+      <div className="room-info">{name}</div>
+    </article>
   )
+}
+
+Room.propTypes = {
+  room: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    slug: PropTypes.string.isRequired,
+    images: PropTypes.arrayOf(PropTypes.string).isRequired,
+    price: PropTypes.number.isRequired
+  })
 }
