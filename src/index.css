@@ -19,3 +19,13 @@ a {
 ul {
   list-style-type: none;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #eee;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: aqua;
+  width: 100%;
+}
