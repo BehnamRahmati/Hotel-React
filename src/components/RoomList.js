@@ -4,7 +4,7 @@ export default function RoomList({ rooms }) {
   if (rooms.length === 0) {
     return (
       <div className="empty-search">
-        <h3>unfortuanetly no math has been found</h3>
+        <h3>unfortuanetly no match has been found!!!</h3>
       </div>
     )
   }
