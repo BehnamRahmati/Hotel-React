@@ -15,7 +15,7 @@ export default class Home extends Component {
           </Banner>
         </Hero>
         <Services />
-        <FeaturedRooms></FeaturedRooms>
+        <FeaturedRooms />
       </>
     )
   }

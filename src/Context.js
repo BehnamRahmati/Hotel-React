@@ -20,7 +20,6 @@ class RoomProvider extends Component {
     let rooms = this.formatData(items);
 
     let featuredRooms = rooms.filter(room => room.featured === true);
-    console.log(featuredRooms);
     this.setState({
       rooms,
       featuredRooms,
